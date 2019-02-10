@@ -70,8 +70,8 @@
     <Content Include="Contact.html" />
     <Content Include="Global.asax" />
     <Content Include="HomePage.html" />
-    <Content Include="Style\Footer.html" />
-    <Content Include="Style\Header.html" />
+    <Content Include="Footer.html" />
+    <Content Include="Header.html" />
     <Content Include="Style\StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
