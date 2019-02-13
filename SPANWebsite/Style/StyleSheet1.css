@@ -1,11 +1,14 @@
 ﻿/* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
     margin-bottom: 0;
-    border-radius: 0;
+    border-radius: 0px !important;
     top: 0px;
     z-index: 1;
     position: sticky;
 }
+
+
+
 .navbar.navbar-inverse {
     margin: 0;
     position: sticky;

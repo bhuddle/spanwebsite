@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TestWebForm.aspx.cs" Inherits="SPANWebsite.TestWebForm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SPAN.aspx.cs" Inherits="SPANWebsite.SPAN" %>
 
 <!DOCTYPE html>
 
@@ -23,19 +23,28 @@
                 <p><a href="#">Link</a></p>
             </div>
             <div class="col-sm-8 body">
-                <div class="col-sm-2 col-md-2 body-image">
-                    <img src="Images/oregon.jpeg" />
+                <div class="form-group-sm">
+                    <h1>SPAN</h1>
+                    <p>Something about getting started</p>
+                    <hr />
                 </div>
-                <div class="col-sm-4 body-content">
-                    <h1>Oregon Department of Human Services</h1>
-                    <p>Webpage being created to help choose correct SPAN forms based on other requirements</p>
-                    <hr>
-                    <h3>Let's get started!</h3>
-                    <p>Put some stuff here that appears after drop down selection</p>
+                <div class="form-group-sm">
+                    <p>Select your group</p>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="120px">
+                        <asp:ListItem Text="In Home PACE" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="CBC PACE" Value="2"></asp:ListItem>
+                        <asp:ListItem Text="ICP" Value="3"></asp:ListItem>
+                        <asp:ListItem Text="CBC" Value="4"></asp:ListItem>
+                        <asp:ListItem Text="NFC" Value="5"></asp:ListItem>
+                    </asp:DropDownList>
+                    <p></p>
+                </div>
+                <div class="form-group-sm"> <!--Add 'Hidden' to class to hide it-->
+                    <p>This choice will only show with certain selection of above</p>
                 </div>
             </div>
             <div class="col-sm-2 sidenav-right">
-                <p>Crap</p>
+                <p>Nada</p>
             </div>
         </div>
         <!--#include file="Footer.html"-->

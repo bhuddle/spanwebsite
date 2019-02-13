@@ -72,8 +72,9 @@
     <Content Include="HomePage.html" />
     <Content Include="Footer.html" />
     <Content Include="Header.html" />
+    <Content Include="SPAN.aspx" />
     <Content Include="Style\StyleSheet1.css" />
-    <Content Include="TestWebForm.aspx" />
+    <Content Include="HomePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -81,12 +82,19 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestWebForm.aspx.cs">
-      <DependentUpon>TestWebForm.aspx</DependentUpon>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TestWebForm.aspx.designer.cs">
-      <DependentUpon>TestWebForm.aspx</DependentUpon>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SPAN.aspx.cs">
+      <DependentUpon>SPAN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SPAN.aspx.designer.cs">
+      <DependentUpon>SPAN.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
