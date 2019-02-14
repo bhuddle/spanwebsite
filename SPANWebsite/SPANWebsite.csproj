@@ -72,6 +72,7 @@
     <Content Include="HomePage.html" />
     <Content Include="Footer.html" />
     <Content Include="Header.html" />
+    <Content Include="Style\JavaScript.js" />
     <Content Include="SPAN.aspx" />
     <Content Include="Style\StyleSheet1.css" />
     <Content Include="HomePage.aspx" />

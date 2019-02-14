@@ -29,8 +29,9 @@
                     <hr />
                 </div>
                 <div class="form-group-sm">
-                    <p>Select your group</p>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Width="120px">
+                    <p>Select your group:</p>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="120px" OnSelectedIndexChanged="DropDownList1_SelectedChanged" AutoPostBack="true">
+                        <asp:ListItem Text="" Value=""></asp:ListItem>
                         <asp:ListItem Text="In Home PACE" Value="1"></asp:ListItem>
                         <asp:ListItem Text="CBC PACE" Value="2"></asp:ListItem>
                         <asp:ListItem Text="ICP" Value="3"></asp:ListItem>
@@ -39,8 +40,37 @@
                     </asp:DropDownList>
                     <p></p>
                 </div>
-                <div class="form-group-sm"> <!--Add 'Hidden' to class to hide it-->
-                    <p>This choice will only show with certain selection of above</p>
+                <!--In Home PACE-->
+                <div class="form-group-sm" id="IHP" runat="server"> 
+                    <p></p>
+                    <p>SPL Change?</p>
+                    <asp:RadioButtonList ID="RadioButtonList1" runat="server" CssClass="radiobutton" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" AutoPostBack="true">
+                        <asp:ListItem Text="Yes" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="No" Value="2"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="form-group-sm" id="IHPEligible" runat="server">
+                    <p></p>
+                    <p>Still eligible?</p>
+                    <asp:RadioButtonList ID="RadioButtonList2" runat="server" CssClass="radiobutton" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList2_SelectedIndexChanged" AutoPostBack="true">
+                        <asp:ListItem Text="Yes" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="No" Value="2"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="form-group-sm" id="IHPStillEligible" runat="server">
+                    <asp:ListBox ID="ListBox1" runat="server" Width="120px">
+                        <asp:ListItem Text="Send SPAN"></asp:ListItem>
+                        <asp:ListItem Text="002N"></asp:ListItem>
+                        <asp:ListItem Text="etc..."></asp:ListItem>
+                    </asp:ListBox>
+                </div>
+                <!--CBC PACE-->
+                <!--ICP-->
+                <!--CBC-->
+                <!--NFC-->
+                <div class="form-group-sm">
+                    <p></p>
+                    <asp:Button ID="Button1" runat="server" Text="Reset" />
                 </div>
             </div>
             <div class="col-sm-2 sidenav-right">

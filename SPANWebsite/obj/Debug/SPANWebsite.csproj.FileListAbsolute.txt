@@ -49,8 +49,8 @@ C:\Users\Bender\source\repos\SPANWebSite\SPANWebsite\bin\roslyn\VBCSCompiler.exe
 C:\Users\Bender\source\repos\SPANWebSite\SPANWebsite\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Bender\source\repos\SPANWebSite\SPANWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Bender\source\repos\SPANWebSite\SPANWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Bender\source\repos\SPANWebSite\SPANWebsite\obj\Debug\SPANWebsite.csprojAssemblyReference.cache
 C:\Users\Bender\source\repos\SPANWebSite\SPANWebsite\obj\Debug\SPANWebsite.csproj.CoreCompileInputs.cache
 C:\Users\Bender\source\repos\SPANWebSite\SPANWebsite\obj\Debug\SPANWebsite.csproj.CopyComplete
 C:\Users\Bender\source\repos\SPANWebSite\SPANWebsite\obj\Debug\SPANWebsite.dll
 C:\Users\Bender\source\repos\SPANWebSite\SPANWebsite\obj\Debug\SPANWebsite.pdb
+C:\Users\Bender\source\repos\SPANWebSite\SPANWebsite\obj\Debug\SPANWebsite.csprojAssemblyReference.cache
