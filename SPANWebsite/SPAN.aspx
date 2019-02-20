@@ -57,20 +57,33 @@
                         <asp:ListItem Text="No" Value="2"></asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
+                <div class="form-group-sm" id="IHPNoChange" runat="server">
+                    <asp:ListBox ID="ListBox3" runat="server" Width="300px">
+                        <asp:ListItem Text="No SPAN"></asp:ListItem>
+                        <asp:ListItem Text="Send Service plan agreement"></asp:ListItem>
+                    </asp:ListBox>
+                </div>
                 <div class="form-group-sm" id="IHPStillEligible" runat="server">
-                    <asp:ListBox ID="ListBox1" runat="server" Width="120px">
+                    <asp:ListBox ID="ListBox1" runat="server" Width="300px">
                         <asp:ListItem Text="Send SPAN"></asp:ListItem>
                         <asp:ListItem Text="002N"></asp:ListItem>
                         <asp:ListItem Text="etc..."></asp:ListItem>
                     </asp:ListBox>
                 </div>
+                <div class="form-group-sm" id="IHPNotElligible" runat="server">
+                    <asp:ListBox ID="ListBox2" runat="server" Width="300px">
+                        <asp:ListItem Text="Review EWE"></asp:ListItem>
+                        <asp:ListItem Text="Or other program eligibility"></asp:ListItem>
+                    </asp:ListBox>
+                </div>
+                
                 <!--CBC PACE-->
                 <!--ICP-->
                 <!--CBC-->
                 <!--NFC-->
                 <div class="form-group-sm">
                     <p></p>
-                    <asp:Button ID="Button1" runat="server" Text="Reset" />
+                    <asp:Button ID="Button1" runat="server" Text="Reset" OnClick="Button1_Click"/>
                 </div>
             </div>
             <div class="col-sm-2 sidenav-right">

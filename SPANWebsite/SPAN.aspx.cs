@@ -17,22 +17,27 @@ namespace SPANWebsite
                 IHP.Visible = false;
                 IHPEligible.Visible = false;
                 IHPStillEligible.Visible = false;
+                IHPNotElligible.Visible = false;
+                IHPNoChange.Visible = false;
             }
         }
 
         protected void DropDownList1_SelectedChanged(object sender, EventArgs e)
         {
-            Debug.WriteLine("fartknocker: " + DropDownList1.SelectedValue);
             IHP.Visible = false;
             IHPEligible.Visible = false;
             IHPStillEligible.Visible = false;
+            IHPNotElligible.Visible = false;
+            IHPNoChange.Visible = false;
             switch (DropDownList1.SelectedValue)
             {
                 case "1":
                     IHP.Visible = true;
+                    RadioButtonList1.SelectedIndex = -1;
+                    RadioButtonList2.SelectedIndex = -1;
                     break;
                 case "2":
-                    IHP.Visible = true;
+                    //IHP.Visible = true;
                     break;
 
             }
@@ -45,6 +50,16 @@ namespace SPANWebsite
             if (RadioButtonList1.SelectedValue == "1")
             {
                 IHPEligible.Visible = true;
+                IHPNoChange.Visible = false;
+                RadioButtonList2.SelectedIndex = -1;
+            }
+            if (RadioButtonList1.SelectedValue == "2")
+            {
+                IHPNoChange.Visible = true;
+                IHPEligible.Visible = false;
+                IHPStillEligible.Visible = false;
+                IHPNotElligible.Visible = false;
+                RadioButtonList2.SelectedIndex = -1;
             }
         }
 
@@ -55,7 +70,21 @@ namespace SPANWebsite
             if (RadioButtonList2.SelectedValue == "1")
             {
                 IHPStillEligible.Visible = true;
+                IHPNotElligible.Visible = false;
             }
+            if (RadioButtonList2.SelectedValue == "2")
+            {
+                IHPNotElligible.Visible = true;
+                IHPStillEligible.Visible = false;
+            }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            DropDownList1.SelectedValue = "";
+            RadioButtonList1.SelectedIndex = -1;
+            RadioButtonList2.SelectedIndex = -1;
+            Page_Load(sender, e);
         }
     }
 }
