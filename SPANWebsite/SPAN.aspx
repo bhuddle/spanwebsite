@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group-sm">
                     <p>Select your group:</p>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Width="120px" OnSelectedIndexChanged="DropDownList1_SelectedChanged" AutoPostBack="true">
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="300px" OnSelectedIndexChanged="DropDownList1_SelectedChanged" AutoPostBack="true">
                         <asp:ListItem Text="" Value=""></asp:ListItem>
                         <asp:ListItem Text="In Home PACE" Value="1"></asp:ListItem>
                         <asp:ListItem Text="CBC PACE" Value="2"></asp:ListItem>
@@ -78,8 +78,83 @@
                 </div>
                 
                 <!--CBC PACE-->
-                <!--ICP-->
+                <div class="form-group-sm" id="CBCPace" runat="server" visible="false"> 
+                    <p></p>
+                    <p>SPL Change?</p>
+                    <asp:RadioButtonList ID="RadioButtonList3" runat="server" CssClass="radiobutton" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList3_SelectedIndexChanged" AutoPostBack="true">
+                        <asp:ListItem Text="Yes" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="No" Value="2"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="form-group-sm" id="CBCPaceElligible" runat="server" visible="false">
+                    <p></p>
+                    <p>Still eligible?</p>
+                    <asp:RadioButtonList ID="RadioButtonList4" runat="server" CssClass="radiobutton" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList4_SelectedIndexChanged" AutoPostBack="true">
+                        <asp:ListItem Text="Yes" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="No" Value="2"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="form-group-sm" id="CBCPaceNoChange" runat="server" visible="false">
+                    <asp:ListBox ID="ListBox4" runat="server" Width ="300px">
+                        <asp:ListItem Text="No SPAN"></asp:ListItem>
+                        <asp:ListItem Text="etc."></asp:ListItem>
+                    </asp:ListBox>
+                </div>
+                <div class="form-group-sm" id="CBCPaceStillElligible" runat="server" visible="false">
+                    <asp:ListBox ID="ListBox5" runat="server" Width="300px">
+                        <asp:ListItem Text="Send SPAN"></asp:ListItem>
+                        <asp:ListItem Text="002N"></asp:ListItem>
+                        <asp:ListItem Text="etc..."></asp:ListItem>
+                    </asp:ListBox>
+                </div>
+                <div class="form-group-sm" id="CBCPaceNotElligible" runat="server" visible="false">
+                    <asp:ListBox ID="ListBox6" runat="server" Width="300px">
+                        <asp:ListItem Text="Review EWE"></asp:ListItem>
+                        <asp:ListItem Text="Or other program eligibility"></asp:ListItem>
+                    </asp:ListBox>
+                </div>
+
+                <!--ICP-->  
+                <div class="form-group-sm" id="ICP" runat="server" visible="false">
+                    <p></p>
+                    <p>SPL Change?</p>
+                    <asp:RadioButtonList ID="RadioButtonList5" runat="server" CssClass="radiobutton" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList5_SelectedIndexChanged" AutoPostBack="true">
+                        <asp:ListItem Text="Yes" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="No" Value="2"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="form-group-sm" id="ICPElligible" runat="server" visible="false">
+                    <p></p>
+                    <p>Still eligible?</p>
+                    <asp:RadioButtonList ID="RadioButtonList6" runat="server" CssClass="radiobutton" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList6_SelectedIndexChanged" AutoPostBack="true">
+                        <asp:ListItem Text="Yes" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="No" Value="2"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="form-group-sm" id="ICPNoChange" runat="server" visible="false">
+                    <asp:ListBox ID="ListBox7" runat="server" Width="300px">
+                        <asp:ListItem Text="No SPAN"></asp:ListItem>
+                        <asp:ListItem Text="Send Service plan agreement"></asp:ListItem>
+                        <asp:ListItem Text="add different ICP forms"></asp:ListItem>
+                    </asp:ListBox>
+                </div>
+                <div class="form-group-sm" id="ICPStillElligible" runat="server" visible="false">
+                    <asp:ListBox ID="ListBox8" runat="server" Width="300px">
+                        <asp:ListItem Text="Send SPAN"></asp:ListItem>
+                        <asp:ListItem Text="002N"></asp:ListItem>
+                        <asp:ListItem Text="etc..."></asp:ListItem>
+                        <asp:ListItem Text="add different ICP forms"></asp:ListItem>
+                    </asp:ListBox>
+                </div>
+                <div class="form-group-sm" id="ICPNotElligible" runat="server" visible="false">
+                    <asp:ListBox ID="ListBox9" runat="server" Width="300px">
+                        <asp:ListItem Text="Review EWE"></asp:ListItem>
+                        <asp:ListItem Text="Or other program eligibility"></asp:ListItem>
+                        <asp:ListItem Text="add different ICP forms"></asp:ListItem>
+                    </asp:ListBox>
+                </div>
                 <!--CBC-->
+                <!--WIP-->
                 <!--NFC-->
                 <div class="form-group-sm">
                     <p></p>

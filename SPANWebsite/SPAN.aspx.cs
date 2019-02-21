@@ -14,11 +14,42 @@ namespace SPANWebsite
         {
             if (DropDownList1.SelectedValue == "")
             {
-                IHP.Visible = false;
-                IHPEligible.Visible = false;
-                IHPStillEligible.Visible = false;
-                IHPNotElligible.Visible = false;
-                IHPNoChange.Visible = false;
+                Set_False();
+                Reset_Index(0);
+            }
+        }
+
+        protected void Set_False()
+        {
+            //Set all variables visibility to false under drop down
+            IHP.Visible = false;
+            IHPEligible.Visible = false;
+            IHPStillEligible.Visible = false;
+            IHPNotElligible.Visible = false;
+            IHPNoChange.Visible = false;
+            CBCPace.Visible = false;
+            CBCPaceElligible.Visible = false;
+            CBCPaceNoChange.Visible = false;
+            CBCPaceNotElligible.Visible = false;
+            CBCPaceStillElligible.Visible = false;
+            ICP.Visible = false;
+            ICPElligible.Visible = false;
+            ICPNoChange.Visible = false;
+            ICPNotElligible.Visible = false;
+            ICPStillElligible.Visible = false;
+        }
+
+        protected void Reset_Index(int var)
+        {
+            //set all indexes back to default
+            if (var == 0)
+            {
+                RadioButtonList1.SelectedIndex = -1;
+                RadioButtonList2.SelectedIndex = -1;
+                RadioButtonList3.SelectedIndex = -1;
+                RadioButtonList4.SelectedIndex = -1;
+                RadioButtonList5.SelectedIndex = -1;
+                RadioButtonList6.SelectedIndex = -1;
             }
         }
 
@@ -37,7 +68,9 @@ namespace SPANWebsite
                     RadioButtonList2.SelectedIndex = -1;
                     break;
                 case "2":
-                    //IHP.Visible = true;
+                    CBCPace.Visible = true;
+                    RadioButtonList3.SelectedIndex = -1;
+                    RadioButtonList4.SelectedIndex = -1;
                     break;
 
             }
@@ -82,9 +115,74 @@ namespace SPANWebsite
         protected void Button1_Click(object sender, EventArgs e)
         {
             DropDownList1.SelectedValue = "";
-            RadioButtonList1.SelectedIndex = -1;
-            RadioButtonList2.SelectedIndex = -1;
+            Reset_Index(0);
             Page_Load(sender, e);
+        }
+
+        protected void RadioButtonList3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (RadioButtonList3.SelectedValue == "1")
+            {
+                CBCPaceElligible.Visible = true;
+                CBCPaceNoChange.Visible = false;
+                RadioButtonList4.SelectedIndex = -1;
+            }
+            if (RadioButtonList3.SelectedValue == "2")
+            {
+                CBCPaceNoChange.Visible = true;
+                CBCPaceElligible.Visible = false;
+                CBCPaceNotElligible.Visible = false;
+                CBCPaceStillElligible.Visible = false;
+                RadioButtonList4.SelectedIndex = -1;
+            }
+
+        }
+
+        protected void RadioButtonList4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //handle cbc pace still elligible
+            if (RadioButtonList4.SelectedValue == "1")
+            {
+                CBCPaceStillElligible.Visible = true;
+                CBCPaceNotElligible.Visible = false;
+            }
+            if (RadioButtonList4.SelectedValue == "2")
+            {
+                CBCPaceNotElligible.Visible = true;
+                CBCPaceStillElligible.Visible = false;
+            }
+        }
+
+        protected void RadioButtonList5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (RadioButtonList5.SelectedValue == "1")
+            {
+                ICPElligible.Visible = true;
+                ICPNoChange.Visible = false;
+                RadioButtonList6.SelectedIndex = -1;
+            }
+            if (RadioButtonList5.SelectedValue == "2")
+            {
+                ICPNoChange.Visible = true;
+                ICPElligible.Visible = false;
+                ICPNotElligible.Visible = false;
+                ICPStillElligible.Visible = false;
+                RadioButtonList6.SelectedIndex = -1;
+            }
+        }
+
+        protected void RadioButtonList6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (RadioButtonList6.SelectedValue == "1")
+            {
+                ICPStillElligible.Visible = true;
+                ICPNotElligible.Visible = false;
+            }
+            if (RadioButtonList6.SelectedValue == "2")
+            {
+                ICPNotElligible.Visible = true;
+                ICPStillElligible.Visible = false;
+            }
         }
     }
 }
