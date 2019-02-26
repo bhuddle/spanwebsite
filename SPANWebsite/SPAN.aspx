@@ -155,7 +155,78 @@
                 </div>
                 <!--CBC-->
                 <!--WIP-->
+                <div class="form-group-sm" id="CBC" runat="server" visible="false"> 
+                    <p></p>
+                    <p>SPL Change?</p>
+                    <asp:RadioButtonList ID="RadioButtonList7" runat="server" CssClass="radiobutton" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList7_SelectedIndexChanged" AutoPostBack="true">
+                        <asp:ListItem Text="Yes" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="No" Value="2"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="form-group-sm" id="CBCElligible" runat="server" visible="false">
+                    <p></p>
+                    <p>Still eligible?</p>
+                    <asp:RadioButtonList ID="RadioButtonList8" runat="server" CssClass="radiobutton" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList8_SelectedIndexChanged" AutoPostBack="true">
+                        <asp:ListItem Text="Yes" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="No" Value="2"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="form-group-sm" id="CBCNoChange" runat="server" visible="false">
+                    <asp:ListBox ID="ListBox10" runat="server" Width ="300px">
+                        <asp:ListItem Text="No SPAN"></asp:ListItem>
+                        <asp:ListItem Text="etc. for CBC"></asp:ListItem>
+                    </asp:ListBox>
+                </div>
+                <div class="form-group-sm" id="CBCStillElligible" runat="server" visible="false">
+                    <asp:ListBox ID="ListBox11" runat="server" Width="300px">
+                        <asp:ListItem Text="Send SPAN"></asp:ListItem>
+                        <asp:ListItem Text="002N"></asp:ListItem>
+                        <asp:ListItem Text="etc...For CBC"></asp:ListItem>
+                    </asp:ListBox>
+                </div>
+                <div class="form-group-sm" id="CBCNotElligible" runat="server" visible="false">
+                    <asp:ListBox ID="ListBox12" runat="server" Width="300px">
+                        <asp:ListItem Text="Review EWE"></asp:ListItem>
+                        <asp:ListItem Text="Or other program eligibility for CBC"></asp:ListItem>
+                    </asp:ListBox>
+                </div>
                 <!--NFC-->
+                <div class="form-group-sm" id="NFC" runat="server" visible="false"> 
+                    <p></p>
+                    <p>SPL Change?</p>
+                    <asp:RadioButtonList ID="RadioButtonList9" runat="server" CssClass="radiobutton" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList9_SelectedIndexChanged" AutoPostBack="true">
+                        <asp:ListItem Text="Yes" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="No" Value="2"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="form-group-sm" id="NFCElligible" runat="server" visible="false">
+                    <p></p>
+                    <p>Still eligible?</p>
+                    <asp:RadioButtonList ID="RadioButtonList10" runat="server" CssClass="radiobutton" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList10_SelectedIndexChanged" AutoPostBack="true">
+                        <asp:ListItem Text="Yes" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="No" Value="2"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="form-group-sm" id="NFCNoChange" runat="server" visible="false">
+                    <asp:ListBox ID="ListBox13" runat="server" Width ="300px">
+                        <asp:ListItem Text="No SPAN"></asp:ListItem>
+                        <asp:ListItem Text="etc."></asp:ListItem>
+                    </asp:ListBox>
+                </div>
+                <div class="form-group-sm" id="NFCStillElligible" runat="server" visible="false">
+                    <asp:ListBox ID="ListBox14" runat="server" Width="300px">
+                        <asp:ListItem Text="Send SPAN"></asp:ListItem>
+                        <asp:ListItem Text="002N"></asp:ListItem>
+                        <asp:ListItem Text="etc..."></asp:ListItem>
+                    </asp:ListBox>
+                </div>
+                <div class="form-group-sm" id="NFCNotElligible" runat="server" visible="false">
+                    <asp:ListBox ID="ListBox15" runat="server" Width="300px">
+                        <asp:ListItem Text="Review EWE"></asp:ListItem>
+                        <asp:ListItem Text="Or other program eligibility"></asp:ListItem>
+                    </asp:ListBox>
+                </div>
+                <!--Reset Button-->
                 <div class="form-group-sm">
                     <p></p>
                     <asp:Button ID="Button1" runat="server" Text="Reset" OnClick="Button1_Click"/>
