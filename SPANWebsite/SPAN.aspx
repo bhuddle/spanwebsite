@@ -154,7 +154,6 @@
                     </asp:ListBox>
                 </div>
                 <!--CBC-->
-                <!--WIP-->
                 <div class="form-group-sm" id="CBC" runat="server" visible="false"> 
                     <p></p>
                     <p>SPL Change?</p>
@@ -210,20 +209,20 @@
                 <div class="form-group-sm" id="NFCNoChange" runat="server" visible="false">
                     <asp:ListBox ID="ListBox13" runat="server" Width ="300px">
                         <asp:ListItem Text="No SPAN"></asp:ListItem>
-                        <asp:ListItem Text="etc."></asp:ListItem>
+                        <asp:ListItem Text="etc. for NFC"></asp:ListItem>
                     </asp:ListBox>
                 </div>
                 <div class="form-group-sm" id="NFCStillElligible" runat="server" visible="false">
                     <asp:ListBox ID="ListBox14" runat="server" Width="300px">
                         <asp:ListItem Text="Send SPAN"></asp:ListItem>
                         <asp:ListItem Text="002N"></asp:ListItem>
-                        <asp:ListItem Text="etc..."></asp:ListItem>
+                        <asp:ListItem Text="etc... for NFC"></asp:ListItem>
                     </asp:ListBox>
                 </div>
                 <div class="form-group-sm" id="NFCNotElligible" runat="server" visible="false">
                     <asp:ListBox ID="ListBox15" runat="server" Width="300px">
                         <asp:ListItem Text="Review EWE"></asp:ListItem>
-                        <asp:ListItem Text="Or other program eligibility"></asp:ListItem>
+                        <asp:ListItem Text="Or other program eligibility for NFC"></asp:ListItem>
                     </asp:ListBox>
                 </div>
                 <!--Reset Button-->

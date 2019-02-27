@@ -42,6 +42,11 @@ namespace SPANWebsite
             CBCNoChange.Visible = false;
             CBCNotElligible.Visible = false;
             CBCStillElligible.Visible = false;
+            NFC.Visible = false;
+            NFCElligible.Visible = false;
+            NFCNoChange.Visible = false;
+            NFCNotElligible.Visible = false;
+            NFCStillElligible.Visible = false;
         }
 
         protected void Reset_Index(int var)
@@ -57,6 +62,8 @@ namespace SPANWebsite
                 RadioButtonList6.SelectedIndex = -1;
                 RadioButtonList7.SelectedIndex = -1;
                 RadioButtonList8.SelectedIndex = -1;
+                RadioButtonList9.SelectedIndex = -1;
+                RadioButtonList10.SelectedIndex = -1;
             }
         }
 
@@ -90,6 +97,9 @@ namespace SPANWebsite
                     RadioButtonList8.SelectedIndex = -1;
                     break;
                 case "5":
+                    NFC.Visible = true;
+                    RadioButtonList9.SelectedIndex = -1;
+                    RadioButtonList10.SelectedIndex = -1;
                     break;
 
             }
@@ -240,11 +250,35 @@ namespace SPANWebsite
         protected void RadioButtonList9_SelectedIndexChanged(object sender, EventArgs e)
         {
             //NFC
+            if (RadioButtonList9.SelectedValue == "1")
+            {
+                NFCElligible.Visible = true;
+                NFCNoChange.Visible = false;
+                RadioButtonList10.SelectedIndex = -1;
+            }
+            if (RadioButtonList9.SelectedValue == "2")
+            {
+                NFCNoChange.Visible = true;
+                NFCElligible.Visible = false;
+                NFCNotElligible.Visible = false;
+                NFCStillElligible.Visible = false;
+                RadioButtonList10.SelectedIndex = -1;
+            }
         }
 
         protected void RadioButtonList10_SelectedIndexChanged(object sender, EventArgs e)
         {
             //NFC
+            if (RadioButtonList10.SelectedValue == "1")
+            {
+                NFCStillElligible.Visible = true;
+                NFCNotElligible.Visible = false;
+            }
+            if (RadioButtonList10.SelectedValue == "2")
+            {
+                NFCNotElligible.Visible = true;
+                NFCStillElligible.Visible = false;
+            }
         }
     }
 }
