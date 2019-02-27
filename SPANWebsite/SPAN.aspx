@@ -232,7 +232,7 @@
                 </div>
             </div>
             <div class="col-sm-2 sidenav-right">
-                <p>Nada</p>
+                <p></p>
             </div>
         </div>
         <!--#include file="Footer.html"-->

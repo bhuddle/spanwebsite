@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="SPANWebsite.TestWebForm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="SPANWebsite.Contact" %>
 
 <!DOCTYPE html>
 
@@ -16,23 +16,19 @@
 <body>
     <form id="form1" runat="server">
         <!--#include file="Header.html"-->
-       <div>
+        <div>
             <div class="col-sm-2 sidenav-left">
                 <p><a href="#">Link</a></p>
                 <p><a href="#">Link</a></p>
                 <p><a href="#">Link</a></p>
             </div>
-            <div class="col-sm-8 body">
-                <div class="col-lg-2 body-image">
-                    <img src="Images/oregon.jpeg" />
-                </div>
-                <div class="col-lg-4 body-content">
-                    <h1>Oregon Department of Human Services</h1>
-                    <p>Webpage being created to help choose correct SPAN forms based on other requirements</p>
-                    <hr>
-                    <h3>Let's get started!</h3>
-                    <p>Put some stuff here that appears after drop down selection</p>
-                </div>
+            <div class="col-sm-8 body" style="text-align:center">
+                <h1>Contact</h1>
+                <h4>Creator</h4>
+                <p>Benjamin Huddle</p>
+                <h4>Email</h4>
+                <p>benjaminehuddle@gmail.com</p>
+                <!--Add some kind of mailto stuff-->
             </div>
             <div class="col-sm-2 sidenav-right">
                 <p></p>
